@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_post_option_addpic2" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_post_option_addpic" android:state_pressed="false" />
+</selector>
