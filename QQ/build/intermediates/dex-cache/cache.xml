@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.4.0_a8c3748dc5b89c0a994983b8dc1d3f890273715b.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_cd94e56649df8a51a544b98ef912530ef283a724.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_80955b0f299b81a769760ffc3f74457914d4251f.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1b51e8c6cc3f044c70e1ab8b6250fe0aac5da6d9">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\instant-run_dbbea749d34a474ab32c2a291bb604ac8459853c.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\library-2.4.0_7dcc3ac4a30f386c51d9582e4504072021db0ad0.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.github.castorflex.smoothprogressbar\library-circular\1.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e6e5cb683c74a95072d8fbf47a997e64546fc284">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.github.castorflex.smoothprogressbar-library-circular-1.2.0_6c30e0519d9f0f7e38a9393d80918998e56af09c.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.3.2\c75edc740a6d8cb1cef6fa82fa594e0bce561916\jackson-databind-2.3.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c75edc740a6d8cb1cef6fa82fa594e0bce561916">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\jackson-databind-2.3.2_57aacb35646339141babaf934acda1d520b17610.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.9.1\e1908f47e7fd11b291dbc8368223db7b4d516b30\joda-time-2.9.1-no-tzdb.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e1908f47e7fd11b291dbc8368223db7b4d516b30">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\joda-time-2.9.1-no-tzdb_1fb6909ac25651dce78452d1ae7c533d13343eb9.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.faradaj\blur-behind\1.0.3\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ef447098d2efd07ac30c86a32623aa3563fbb7e2">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.faradaj-blur-behind-1.0.3_0076d0cd1e03aa99ae8b50176abbce56eeb66244.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.6.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.facebook.android-facebook-android-sdk-4.6.0_c686a239747c496d2d6aeb8317c85c4e4ba0bd4d.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.turbomanage.basic-http-client\http-client-java\0.89\1cd2b30199408ba52b0dbe0a7c2b19481596a763\http-client-java-0.89.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1cd2b30199408ba52b0dbe0a7c2b19481596a763">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\http-client-java-0.89_a4aa05bf057ec3c22c9593ed48381f4821ad6425.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5ddf5f4817565c9db82613c16093f76640a54e15">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.android.support-support-v13-23.1.1_0e40a9359f506e5eee16a1aea043418eccdcda9e.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_edeb163dd9c0e56e3b1745a73b6c9c55a1906dfd.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.turbomanage.basic-http-client\http-client-android\0.89\87f4f7a8adb91ff7efe42b335adbd9bec5353463\http-client-android-0.89.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="87f4f7a8adb91ff7efe42b335adbd9bec5353463">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\http-client-android-0.89_8543f496fcad0392cff066bfb79702c7aab781b6.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="15493d62373180603d17e36a63982bbe2df8c3b3">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_c305945eebdab1941450e3bb8fc471f331db6b5b.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.4.0_af29cbea05ddc07a5d2b469f7b46be467de5c051.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_b396319cb828b5cd8c9c5b6440d6caa57880414a.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.oguzdev\CircularFloatingActionMenu\1.0.2\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="607d961caf1a59b6e782724654c1f3229e036c20">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.oguzdev-CircularFloatingActionMenu-1.0.2_8528df787b16ccaa265b1892213bfec59acb6946.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.5\442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375\universal-image-loader-1.9.5.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.5_d77cc6b93e8e846a94324f92ea303ca5b9716bda.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_54ec5746e268bcd4eac8557daaadcb1654a333d7.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\hanks.xyz\smallbang-library\0.1.2\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f4d1321eac98b237f7df36aadcbaefa1fe662551">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\hanks.xyz-smallbang-library-0.1.2_d21941371f76ec7bcbfe65440384c61aaa7e3b5b.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0_ebbc6c4883b91c215ccac1e578bdb78653921571.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.nispok\snackbar\2.11.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d0db114dc90b3e192ba48d22421a9c47cfc01f00">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.nispok-snackbar-2.11.0_cfb14cb4a4122ecb1a1c509d8283ccb61927eba1.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.github.rey5137\material\1.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0040be6592cbfbb19a2c1e90a759278795ed2280">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.github.rey5137-material-1.2.1_aa1fa21ad5a7b3f5bb22696a86abadb072dced99.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-22.0.0_941c082929a1f688bfb69edb40ad235ac6e4e76c.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f4d7a07120e76988f3a15403838d323c2400db83">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_821290a78e1ac935e19e6b4b49e01c9efeb7701c.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_26ed98c0916022121902d71beb1503c06ba7f06b.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.ogaclejapan.smarttablayout\library\1.6.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="773103b47908c3026873309dd5d968b7fc6556eb">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.ogaclejapan.smarttablayout-library-1.6.0_4a788ab45e3b2f98da9c00bf9a653abb494e27cf.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.ogaclejapan.smarttablayout\utils-v13\1.6.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="15e4e791b9d3f9246fe3ab856493803a3f4eb6b1">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.ogaclejapan.smarttablayout-utils-v13-1.6.0_7e2487e6aba802618a04549c82e7a55da80425c6.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\io.nlopez.smartlocation\library\3.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="689b36e0831353e1b2e6fea1a24db7172d03403c">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\io.nlopez.smartlocation-library-3.2.1_3c859203301c07bd23312a8c16c1b9376917d0b8.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-22.2.0_4c437063ad337240a432f649e8a96b051622071d.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.3.0\f5e853a20b60758922453d56f9ae1e64af5cb3da\jackson-annotations-2.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f5e853a20b60758922453d56f9ae1e64af5cb3da">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.3.0_cdeb64f351b5d6ca8397a7e78571c61b6d2e94f8.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.github.dmytrodanylyk.android-process-button\library\1.0.4\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="88ccdbf844995d5c9c845e087068d27588b2d026">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.github.dmytrodanylyk.android-process-button-library-1.0.4_5378a0354325910962eda1a61d4b885c0f3215ed.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\de.hdodenhof-circleimageview-2.0.0_5e71ca65aee40d0da8fccc26b8a61d7c19e6c2e5.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\net.danlew\android.joda\2.9.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b7f8248eb6a3aa6970d11da5b51b0a84134bd25f">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\net.danlew-android.joda-2.9.1_50d6e32b2f9d3d4c9467a894af539e00bbbc7205.jar" />
+    </item>
+    <item
+        jar="D:\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_8452896f382bf7758fa53eb87c956b1c7e39f299.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_c9a1c733c5cd36ea20cd70cd6b718908d9bd5119.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.3.2\559b70ac8a0d5cad611da4223137a920147201ba\jackson-core-2.3.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="559b70ac8a0d5cad611da4223137a920147201ba">
+        <dex dex="C:\Users\user\AndroidStudioProjects\QQ\app\build\intermediates\pre-dexed\debug\jackson-core-2.3.2_9e7717c361241e69906f76dfd25ad92142eac528.jar" />
+    </item>
+
+</items>
