@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/ibSelectQuestionPhoto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_photo_change_selector"
+            android:onClick="changeQuestionImage" />
+
+        <ImageButton
+            android:id="@+id/ibTakeQuestionPhoto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ibSelectQuestionPhoto"
+            android:background="@drawable/ic_photo_take_selector"
+            android:onClick="takeQuestionImage" />
+
+        <ImageButton
+            android:id="@+id/ibSaveQuestionPhoto"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_photo_save_selector"
+            android:onClick="saveQuestionImage" />
+
+        <ImageButton
+            android:id="@+id/ibRemoveQuestionPhoto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ibSaveQuestionPhoto"
+            android:background="@drawable/ic_photo_remove_selector"
+            android:onClick="removeQuestionImage" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivQuestionImageFull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

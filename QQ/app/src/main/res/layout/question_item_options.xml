@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_question_option_normal"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:src="#666666"
+                android:visibility="gone"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Option1"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_question_myselected"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="%0"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_question_option_normal"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:src="#666666"
+                android:visibility="gone"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Option2"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_question_myselected"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="%0"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_question_option_normal"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:src="#666666"
+                android:visibility="gone"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Option3"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_question_myselected"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="%0"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_question_option_normal"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:src="#666666"
+                android:visibility="gone"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Option4"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_question_myselected"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="%0"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_question_option_normal"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:src="#666666"
+                android:visibility="gone"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Option5"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_question_myselected"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="%0"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_question_option_normal"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:src="#666666"
+                android:visibility="gone"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Option6"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_question_myselected"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="%0"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_question_option_normal"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:src="#666666"
+                android:visibility="gone"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Option7"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_question_myselected"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="%0"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_question_option_normal"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:src="#666666"
+                android:visibility="gone"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Option8"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_question_myselected"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="%0"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+</merge>

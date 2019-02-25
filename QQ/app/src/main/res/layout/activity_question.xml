@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme">
+
+    <RelativeLayout
+        android:id="@+id/llQuestionTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/topbar_color"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/ibQuestionGoHome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_gohome_selector"
+            android:onClick="goHome" />
+
+        <ImageView
+            android:id="@+id/llQuestionTopBarLogo"
+            android:layout_width="94dp"
+            android:layout_height="37.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_quique" />
+
+        <ImageButton
+            android:id="@+id/ibQuestionRemoveTopbar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_question_remove_topbar_selector"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ibQuestionReportTopbar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_question_report_topbar_selector"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ibQuestionFBTopbar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ibQuestionGoHome"
+            android:background="@drawable/ic_question_fb_topbar_selector"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/ibQuestionTWTopbar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ibQuestionFBTopbar"
+            android:background="@drawable/ic_question_tw_topbar_selector"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSendComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_comment_item"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/edComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Yorum..."
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLength="100"
+                android:textColor="#666666"
+                android:textColorHint="#CCCCCC"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ibSendComment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/ic_button_ok_selector"
+                android:onClick="sendComment" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llSendComment"
+        android:layout_below="@+id/llQuestionTopBar"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srlQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llQuestionTopBar">
+
+            <com.quiqueapp.qq.InteractiveScrollView
+                android:id="@+id/isvQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llQuestionLoading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <fr.castorflex.android.circularprogressbar.CircularProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:indeterminate="true"
+                            app:cpb_color="#58ACFA"
+                            app:cpb_max_sweep_angle="300"
+                            app:cpb_min_sweep_angle="10"
+                            app:cpb_rotation_speed="1.0"
+                            app:cpb_stroke_width="4dp"
+                            app:cpb_sweep_speed="1.0" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/llQuestionLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/llQuestionBody"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical" />
+
+                            <LinearLayout
+                                android:id="@+id/llQuestionComments"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPostCommentPredict"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:animateLayoutChanges="true"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </com.quiqueapp.qq.InteractiveScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

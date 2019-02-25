@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="32dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.rey.material.widget.Switch
+                        android:id="@+id/swBlocked"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:gravity="center"
+                        app:sw_thumbColor="@color/switch_colors_block"
+                        app:sw_trackColor="@color/switch_colors_block"
+                        app:sw_trackSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tvBlocked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif-condensed"
+                        android:onClick="showBlockInfo"
+                        android:text="Engelle"
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llUserProfileSubscribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.rey.material.widget.Switch
+                        android:id="@+id/swSubscribed"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:gravity="center"
+                        app:sw_thumbColor="@color/switch_colors"
+                        app:sw_trackColor="@color/switch_colors"
+                        app:sw_trackSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tvSubscribed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif-condensed"
+                        android:onClick="showSubscribeInfo"
+                        android:text="Gönderi bildirimleri"
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageButton
+                        android:id="@+id/ibReport"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/ic_question_report_topbar_selector"
+                        android:onClick="goReport" />
+
+                    <TextView
+                        android:id="@+id/tvReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif-condensed"
+                        android:onClick="goReport"
+                        android:text="Şikayet Et!"
+                        android:textColor="#FE2E2E"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageButton
+                        android:id="@+id/ibUserProfileSave"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ic_button_ok_selector"
+                        android:onClick="goSaveUserProfile" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

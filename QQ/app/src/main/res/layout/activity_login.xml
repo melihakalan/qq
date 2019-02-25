@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llLoginBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_login_theme"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/llLoginLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="131.6dp"
+                android:layout_height="52.5dp"
+                android:alpha="1"
+                android:background="@drawable/login_quique" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginFirst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/btLoginMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="goLoginEmail"
+                android:text="DEVAM"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                custom:pb_colorComplete="@color/green_complete"
+                custom:pb_colorError="@color/red_error"
+                custom:pb_colorNormal="@color/actionbutton_bg"
+                custom:pb_colorPressed="@color/actionbutton_pressed"
+                custom:pb_colorProgress="@color/purple_progress"
+                custom:pb_textComplete="Tamam!"
+                custom:pb_textError="Hata!"
+                custom:pb_textProgress="DEVAM" />
+
+            <LinearLayout
+                android:id="@+id/lledLoginMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btLoginMail"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/style_ed_login"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_login_email" />
+
+                <EditText
+                    android:id="@+id/edLoginMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="E-Mail"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="#EEEEEE"
+                    android:textColorHint="#BBBBBB"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLoginSocial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/lledLoginMail"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ibLoginFacebook"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/ic_facebook_selector"
+                    android:onClick="facebookLogin" />
+
+                <ImageButton
+                    android:id="@+id/ibLoginTwitter"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/ic_twitter_selector" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginPW"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lledLoginPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btLoginAccount"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/style_ed_login"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_login_password" />
+
+                <EditText
+                    android:id="@+id/edLoginPW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Şifre"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="#EEEEEE"
+                    android:textColorHint="#BBBBBB"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/btLoginAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="goLoginAccount"
+                android:text="TAMAM"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                custom:pb_colorComplete="@color/green_complete"
+                custom:pb_colorError="@color/red_error"
+                custom:pb_colorNormal="@color/actionbutton_bg"
+                custom:pb_colorPressed="@color/actionbutton_pressed"
+                custom:pb_colorProgress="@color/purple_progress"
+                custom:pb_textComplete="Tamam!"
+                custom:pb_textError="Hata!"
+                custom:pb_textProgress="TAMAM" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lledLoginPW"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="end"
+                android:onClick="goForgotPW"
+                android:text="Şifremi unuttum"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lledSignupNick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lledSignupName"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/style_ed_login"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_login_nick" />
+
+                <EditText
+                    android:id="@+id/edSignupNick"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Kullanıcı Adı"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/edSignupName"
+                    android:textColor="#EEEEEE"
+                    android:textColorHint="#BBBBBB"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lledSignupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lledSignupPW"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/style_ed_login"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_login_name" />
+
+                <EditText
+                    android:id="@+id/edSignupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="İsim"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/edSignupPW"
+                    android:textColor="#EEEEEE"
+                    android:textColorHint="#BBBBBB"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lledSignupPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lledSignupPW2"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/style_ed_login"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_login_password" />
+
+                <EditText
+                    android:id="@+id/edSignupPW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Şifre"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/edSignupPW2"
+                    android:textColor="#EEEEEE"
+                    android:textColorHint="#BBBBBB"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lledSignupPW2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btSignUp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/style_ed_login"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_login_password" />
+
+                <EditText
+                    android:id="@+id/edSignupPW2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Şifrenizi Doğrulayın"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="#EEEEEE"
+                    android:textColorHint="#BBBBBB"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/btSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="goSignUp"
+                android:text="TAMAM"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                custom:pb_colorComplete="@color/green_complete"
+                custom:pb_colorError="@color/red_error"
+                custom:pb_colorNormal="@color/actionbutton_bg"
+                custom:pb_colorPressed="@color/actionbutton_pressed"
+                custom:pb_colorProgress="@color/purple_progress"
+                custom:pb_textComplete="Tamam!"
+                custom:pb_textError="Hata!"
+                custom:pb_textProgress="TAMAM" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lledFacebookGetNick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btFacebookGetNick"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/style_ed_login"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_login_nick" />
+
+                <EditText
+                    android:id="@+id/edFacebookGetNick"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Kullanıcı Adı"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="#EEEEEE"
+                    android:textColorHint="#BBBBBB"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/btFacebookGetNick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="goFacebookSignup"
+                android:text="TAMAM"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                custom:pb_colorComplete="@color/green_complete"
+                custom:pb_colorError="@color/red_error"
+                custom:pb_colorNormal="@color/actionbutton_bg"
+                custom:pb_colorPressed="@color/actionbutton_pressed"
+                custom:pb_colorProgress="@color/purple_progress"
+                custom:pb_textComplete="Tamam!"
+                custom:pb_textError="Hata!"
+                custom:pb_textProgress="TAMAM" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

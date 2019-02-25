@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.quiqueapp.qq.InteractiveScrollView
+            android:id="@+id/isvSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/bg_post_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/ivSearchIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_search_icon" />
+
+                    <ImageButton
+                        android:id="@+id/ibCancelSearch"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_search_cancel_icon"
+                        android:onClick="cancelSearch"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/edSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="\@nick, #konu veya isim ara"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/flSearchStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <fr.castorflex.android.circularprogressbar.CircularProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cpbSearch"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:visibility="gone"
+                        app:cpb_color="#58ACFA"
+                        app:cpb_max_sweep_angle="300"
+                        app:cpb_min_sweep_angle="10"
+                        app:cpb_rotation_speed="1.0"
+                        app:cpb_stroke_width="4dp"
+                        app:cpb_sweep_speed="1.0" />
+
+                    <TextView
+                        android:id="@+id/tvNoSearchResults"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:text="Sonuç bulunamadı!"
+                        android:textColor="#666666"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/llSearchResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llTrendingTagsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_post_item"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:text="Popüler Konular"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#EEEEEE" />
+
+                    <LinearLayout
+                        android:id="@+id/llTrendingTags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.quiqueapp.qq.InteractiveScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

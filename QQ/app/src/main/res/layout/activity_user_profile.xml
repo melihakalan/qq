@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llUserProfileTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/topbar_color"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/ibUserProfileGoHome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_gohome_selector"
+            android:onClick="goHome" />
+
+        <ImageView
+            android:id="@+id/ivUserProfileTopBarLogo"
+            android:layout_width="94dp"
+            android:layout_height="37.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_quique" />
+
+        <ImageButton
+            android:id="@+id/ibUserProfileSettings"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_settings_selector"
+            android:onClick="userProfileSettingsClick"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/ibUserProfileChat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ibUserProfileSettings"
+            android:background="@drawable/ic_myprofile_chat_selector"
+            android:onClick="userProfileChatClick" />
+
+        <ImageButton
+            android:id="@+id/ibUserProfileFav"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ibUserProfileChat"
+            android:background="@drawable/ic_myprofile_fav_selector"
+            android:onClick="userProfileFavClick" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srlUserProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.quiqueapp.qq.InteractiveScrollView
+            android:id="@+id/isvUserProfile"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:id="@+id/llUserProfileLoading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <fr.castorflex.android.circularprogressbar.CircularProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:indeterminate="true"
+                        app:cpb_color="#58ACFA"
+                        app:cpb_max_sweep_angle="300"
+                        app:cpb_min_sweep_angle="10"
+                        app:cpb_rotation_speed="1.0"
+                        app:cpb_stroke_width="4dp"
+                        app:cpb_sweep_speed="1.0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llUserProfileBlocked"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ic_user_blocked" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Bu kullanıcı tarafından engellendiniz."
+                        android:textColor="#666666"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llUserProfileOpen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_profile_panel"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:id="@+id/llUserProfileQP"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/ibUserProfileQP"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:background="@drawable/ic_myprofile_qp_selector" />
+
+                                <TextView
+                                    android:id="@+id/tvUserProfileQP"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="0"
+                                    android:textColor="#666666"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llUserProfilePhoto"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/civUserProfilePhoto"
+                                    android:layout_width="96dp"
+                                    android:layout_height="96dp"
+                                    android:onClick="showUserProfilePhoto"
+                                    android:src="@drawable/ic_pp_person"
+                                    app:civ_border_color="#FFFFFFFF"
+                                    app:civ_border_width="1dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llUserProfileFollow"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:onClick="goFollowUser"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <ImageButton
+                                    android:id="@+id/ibUserProfileFollow"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:background="@drawable/ic_follow_selector"
+                                    android:onClick="goFollowUser" />
+
+                                <TextView
+                                    android:id="@+id/tvUserProfileFollow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:gravity="center"
+                                    android:onClick="goFollowUser"
+                                    android:maxLines="1"
+                                    android:text="Takip et"
+                                    android:textColor="#666666"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llUserProfileFollowPending"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:onClick="goCancelPending"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <ImageButton
+                                    android:id="@+id/ibUserProfileFollowPending"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:background="@drawable/ic_follow_pending_selector"
+                                    android:onClick="goCancelPending" />
+
+                                <TextView
+                                    android:id="@+id/tvUserProfileFollowPending"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:gravity="center"
+                                    android:onClick="goCancelPending"
+                                    android:maxLines="1"
+                                    android:text="Onay bekleniyor"
+                                    android:textColor="#666666"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llUserProfileUnfollow"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:onClick="goUnfollowUser"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <ImageButton
+                                    android:id="@+id/ibUserProfileUnfollow"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:background="@drawable/ic_unfollow_selector"
+                                    android:onClick="goUnfollowUser" />
+
+                                <TextView
+                                    android:id="@+id/tvUserProfileUnfollow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:gravity="center"
+                                    android:onClick="goUnfollowUser"
+                                    android:maxLines="1"
+                                    android:text="Takibi bırak"
+                                    android:textColor="#666666"
+                                    android:textSize="14dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvUserProfileName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="Name"
+                            android:textColor="#666666"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvUserProfileNick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="nick"
+                            android:textColor="#CCCCCC"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvUserProfileBio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:text="bio"
+                            android:textColor="#888888"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#EEEEEE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_profile_panel"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Soru"
+                                android:textColor="#CCCCCC"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/tvUserProfileQCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:textColor="#58ACFA"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:onClick="showFollowerList"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:fontFamily="sans-serif-condensed"
+                                android:onClick="showFollowerList"
+                                android:text="Takipçi"
+                                android:textColor="#CCCCCC"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/tvUserProfileFollower"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:fontFamily="sans-serif-condensed"
+                                android:gravity="center"
+                                android:onClick="showFollowerList"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:textColor="#58ACFA"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:onClick="showFollowingList"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:fontFamily="sans-serif-condensed"
+                                android:onClick="showFollowingList"
+                                android:text="Takip"
+                                android:textColor="#CCCCCC"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/tvUserProfileFollowing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:fontFamily="sans-serif-condensed"
+                                android:gravity="center"
+                                android:onClick="showFollowingList"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:textColor="#58ACFA"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llUserProfileContents"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"></LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.quiqueapp.qq.InteractiveScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

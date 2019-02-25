@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="actionbutton_bg">#1C1C1C</color>
+    <color name="actionbutton_pressed">#000000</color>
+
+    <color name="toolbar_on">#EEEEEE</color>
+
+    <color name="barcolor">#1c1c1c</color>
+    <color name="subbarcolor">#252525</color>
+
+</resources>

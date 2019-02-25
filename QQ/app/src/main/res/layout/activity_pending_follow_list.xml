@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llPendingListTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/topbar_color"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/ibPendingListGoHome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_gohome_selector"
+            android:onClick="goHome" />
+
+        <ImageView
+            android:id="@+id/llPendingListTopBarLogo"
+            android:layout_width="94dp"
+            android:layout_height="37.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_quique" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/subbar_color"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Takip istekleri"
+            android:textColor="#EEEEEE"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srlPendingList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.quiqueapp.qq.InteractiveScrollView
+            android:id="@+id/isvPendingList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llPendingListLoading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <fr.castorflex.android.circularprogressbar.CircularProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:indeterminate="true"
+                        app:cpb_color="#58ACFA"
+                        app:cpb_max_sweep_angle="300"
+                        app:cpb_min_sweep_angle="10"
+                        app:cpb_rotation_speed="1.0"
+                        app:cpb_stroke_width="4dp"
+                        app:cpb_sweep_speed="1.0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPendingListContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </com.quiqueapp.qq.InteractiveScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

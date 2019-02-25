@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme">
+
+    <RelativeLayout
+        android:id="@+id/llTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/topbar_color"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/ivTopBarLogo"
+            android:layout_width="94dp"
+            android:layout_height="37.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_quique" />
+
+        <ImageButton
+            android:id="@+id/ibChat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_myprofile_chat_selector"
+            android:onClick="chatClick"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ibFav"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ibChat"
+            android:background="@drawable/ic_myprofile_fav_selector"
+            android:onClick="favClick"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ibLogout"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_logout_selector"
+            android:onClick="logoutClick"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ibSettings"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ibLogout"
+            android:background="@drawable/ic_settings_selector"
+            android:onClick="settingsClick"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ibNearQuestions"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_near_topbar_selector"
+            android:onClick="nearQuestionsClick"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/toolbar_color"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:id="@+id/llToolbar1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="toolbarClick1"
+            android:padding="6dp">
+
+            <ImageButton
+                android:id="@+id/ibToolbar1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/toolbar_selector_1"
+                android:onClick="toolbarClick1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llToolbar2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="toolbarClick2"
+            android:padding="6dp">
+
+            <ImageButton
+                android:id="@+id/ibToolbar2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/toolbar_selector_2"
+                android:onClick="toolbarClick2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llToolbar3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="toolbarClick3"
+            android:padding="6dp">
+
+            <ImageButton
+                android:id="@+id/ibToolbar3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/toolbar_selector_3"
+                android:onClick="toolbarClick3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llToolbar4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="toolbarClick4"
+            android:padding="6dp">
+
+            <ImageButton
+                android:id="@+id/ibToolbar4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/toolbar_selector_4"
+                android:onClick="toolbarClick4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llToolbar5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="toolbarClick5"
+            android:padding="6dp">
+
+            <ImageButton
+                android:id="@+id/ibToolbar5"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/toolbar_selector_5"
+                android:onClick="toolbarClick5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llHomeContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/llToolBar"
+        android:layout_below="@id/llTopBar"
+        android:orientation="vertical" />
+
+</RelativeLayout>

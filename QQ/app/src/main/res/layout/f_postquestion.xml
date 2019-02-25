@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/ibPostQuestion"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_button_ok_selector" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/ibPostQuestion"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="SORU"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_post_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageButton
+                        android:id="@+id/ibSetQuestionImage"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/ic_post_option_addpic_selector"
+                        android:onClick="setQuestionImage" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/civQuestionImage"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:clickable="true"
+                        android:onClick="setQuestionImage"
+                        android:visibility="gone"
+                        app:civ_border_color="#FFFFFFFF"
+                        app:civ_border_width="0.5dp" />
+
+                    <ImageButton
+                        android:id="@+id/ibPostLocation"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/ic_post_location_on"
+                        android:onClick="togglePostLocation" />
+
+                    <EditText
+                        android:id="@+id/edQuestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Soru..."
+                        android:imeOptions="actionNext"
+                        android:lines="2"
+                        android:maxLength="120"
+                        android:nextFocusForward="@+id/edTags"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_post_item"
+                    android:padding="5dp">
+
+                    <EditText
+                        android:id="@+id/edTags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="#Konu"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="#58ACFA"
+                        android:textColorHint="#AA58ACFA"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPostQuestionPredict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:animateLayoutChanges="true"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="SEÇENEKLER"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/llPostOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/ibRemovePostOption"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/ic_post_option_del_selector"
+                            android:onClick="removePostOption" />
+
+                        <ImageButton
+                            android:id="@+id/ibAddPostOption"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/ic_post_option_add_selector"
+                            android:onClick="addPostOption" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llSettingsTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/topbar_color"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/ibSettingsGoHome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_gohome_selector"
+            android:onClick="goHome" />
+
+        <ImageView
+            android:id="@+id/ivSettingsTopBarLogo"
+            android:layout_width="94dp"
+            android:layout_height="37.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_quique" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/subbar_color"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Ayarlar"
+            android:textColor="#EEEEEE"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llSettingsFBUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_settings_fb" />
+
+                <TextView
+                    android:id="@+id/tvSettingsFBUsers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="FACEBOOK ARKADAŞLARINI BUL"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsCallUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_settings_callbook" />
+
+                <TextView
+                    android:id="@+id/tvSettingsCallUsers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="REHBERİNDEKİLERİ BUL"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsChangePW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:onClick="togglePWLayout"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="togglePWLayout"
+                    android:src="@drawable/ic_settings_password" />
+
+                <TextView
+                    android:id="@+id/tvSettingsChangePW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="togglePWLayout"
+                    android:text="ŞİFRE DEĞİŞTİR"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsPWLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_settings_password" />
+
+                    <EditText
+                        android:id="@+id/edSettingsPW"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Mevcut Şifre"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/edSettingsNewPW1"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_settings_password2" />
+
+                    <EditText
+                        android:id="@+id/edSettingsNewPW1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Yeni Şifre"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/edSettingsNewPW2"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_settings_password2" />
+
+                    <EditText
+                        android:id="@+id/edSettingsNewPW2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Şifre Doğrulama"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="savePassword"
+                    android:padding="10dp"
+                    android:text="KAYDET"
+                    android:textColor="#58ACFA"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsPrivateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_settings_private_account" />
+
+                <TextView
+                    android:id="@+id/tvSettingsPrivateAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="ONAYLI TAKİP"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <com.rey.material.widget.Switch
+                        android:id="@+id/swSettingsPrivateAccount"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        app:sw_thumbColor="@color/switch_colors"
+                        app:sw_trackColor="@color/switch_colors"
+                        app:sw_trackSize="14dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsToggleNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_settings_notifications" />
+
+                <TextView
+                    android:id="@+id/tvSettingsToggleNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="BİLDİRİMLER"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <com.rey.material.widget.Switch
+                        android:id="@+id/swSettingsToggleNotifications"
+                        style="@style/Material.Widget.Switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        app:sw_thumbColor="@color/switch_colors"
+                        app:sw_trackColor="@color/switch_colors"
+                        app:sw_trackSize="14dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:onClick="clickAbout"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="clickAbout"
+                    android:src="@drawable/ic_settings_about" />
+
+                <TextView
+                    android:id="@+id/tvSettingsAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="clickAbout"
+                    android:text="HAKKINDA"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:onClick="clickAbout"
+                    android:text=">"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsReportProblem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:onClick="clickReportProblem"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="clickReportProblem"
+                    android:src="@drawable/ic_settings_report" />
+
+                <TextView
+                    android:id="@+id/tvSettingsReportProblem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="clickReportProblem"
+                    android:text="SORUN BİLDİR"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:onClick="clickReportProblem"
+                    android:text=">"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsReportLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Sorunu kısaca açıklayınız..."
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLength="100"
+                    android:padding="10dp"
+                    android:textColor="#666666"
+                    android:textColorHint="#CCCCCC"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="sendReport"
+                    android:padding="10dp"
+                    android:text="GÖNDER"
+                    android:textColor="#58ACFA"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsTOS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:onClick="clickTOS"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="clickTOS"
+                    android:src="@drawable/ic_settings_tos" />
+
+                <TextView
+                    android:id="@+id/tvSettingsTOS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="clickTOS"
+                    android:text="KULLANIM ŞARTLARI"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:onClick="clickTOS"
+                    android:text=">"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:onClick="clickPP"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="clickPP"
+                    android:src="@drawable/ic_settings_privacy" />
+
+                <TextView
+                    android:id="@+id/tvSettingsPP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="clickPP"
+                    android:text="GİZLİLİK İLKELERİ"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:onClick="clickPP"
+                    android:text=">"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSettingsLicenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_list_item"
+                android:gravity="center_vertical"
+                android:onClick="clickLicenses"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:onClick="clickLicenses"
+                    android:src="@drawable/ic_settings_library" />
+
+                <TextView
+                    android:id="@+id/tvSettingsLicenses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="clickLicenses"
+                    android:text="LİSANSLAR"
+                    android:textColor="#666666"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:onClick="clickLicenses"
+                    android:text=">"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

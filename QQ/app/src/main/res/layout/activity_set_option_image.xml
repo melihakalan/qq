@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/ibSelectOptionPhoto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_photo_change_selector"
+            android:onClick="changeOptionImage" />
+
+        <ImageButton
+            android:id="@+id/ibTakeOptionPhoto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ibSelectOptionPhoto"
+            android:background="@drawable/ic_photo_take_selector"
+            android:onClick="takeOptionImage" />
+
+        <ImageButton
+            android:id="@+id/ibSaveOptionPhoto"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_photo_save_selector"
+            android:onClick="saveOptionImage" />
+
+        <ImageButton
+            android:id="@+id/ibRemoveOptionPhoto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ibSaveOptionPhoto"
+            android:background="@drawable/ic_photo_remove_selector"
+            android:onClick="removeOptionImage" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivOptionImageFull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

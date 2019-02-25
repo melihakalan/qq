@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="32dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_name" />
+
+                    <EditText
+                        android:id="@+id/edProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="İsim"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/edProfileNick"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_nick" />
+
+                    <EditText
+                        android:id="@+id/edProfileNick"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Kullanıcı Adı"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/edProfileBio"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_bio" />
+
+                    <EditText
+                        android:id="@+id/edProfileBio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Bilgi"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:maxLength="60"
+                        android:maxLines="3"
+                        android:nextFocusForward="@+id/edProfilePhone"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_phone" />
+
+                    <EditText
+                        android:id="@+id/edProfilePhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Telefon"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textColorHint="#CCCCCC"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageButton
+                        android:id="@+id/ibMyProfileMale"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ic_male"
+                        android:onClick="chooseMale" />
+
+                    <ImageButton
+                        android:id="@+id/ibMyProfileFemale"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="@drawable/ic_female"
+                        android:onClick="chooseFemale" />
+
+                    <ImageButton
+                        android:id="@+id/ibMyProfileNoGender"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="@drawable/ic_nogender"
+                        android:onClick="chooseNoGender" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blur_item"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageButton
+                        android:id="@+id/ibMyProfileSave"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ic_button_ok_selector"
+                        android:onClick="goSaveProfile" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
