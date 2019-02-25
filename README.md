@@ -1,2 +1,2 @@
 # qq
-poll-based interactive android app (2016)
+poll-based interactive android app
